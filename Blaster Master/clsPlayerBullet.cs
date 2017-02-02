@@ -27,7 +27,7 @@ namespace BlasterMaster
             bullet.MakeTransparent(Color.White);
         }
 
-        public void moveBullets(Graphics Destination)
+        public virtual void moveBullets(Graphics Destination)
         {
             //------------------------------------------------------------------------------------------------------------------
             // Purpose: Method to move the player's bullets by 16 pixels every frame  
