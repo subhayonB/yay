@@ -111,7 +111,7 @@ namespace BlasterMaster
 
         // Class refs
         private clsVectorScroll[] vectorScroll = new clsVectorScroll[10];
-        private clsPlayerBullet[,] playerbullet = new clsPlayerBullet[6, 5];
+        private clsPlayerBullet[,] playerbullet = new mybullet[6, 5];
         private clsInvader[] invaders = new clsInvader[60];
         private clsParticle[] particle = new clsParticle[60];
         private clsStars[] stars = new clsStars[100];
@@ -267,7 +267,7 @@ namespace BlasterMaster
 
                     // Calls whilst the game is being played ...
                     doPlayer();
-                    doParticles();
+                    //doParticles();
                     doPickups();
                     checkCollisions();
                 }
@@ -913,7 +913,7 @@ namespace BlasterMaster
                                             case 1: //:: x1 fire ::
 
                                                 // Create new instances
-                                                playerbullet[i, 0] = new clsPlayerBullet(x - 2, y);
+                                                playerbullet[i, 0] = new mybullet(x - 2, y);
 
                                                 // Bail out
                                                 bailOut = true;
@@ -922,9 +922,9 @@ namespace BlasterMaster
                                             case 3: //:: x3 fire ::
                                                
                                                 // Create new instances
-                                                playerbullet[i, 0] = new clsPlayerBullet(x - 2, y);
-                                                playerbullet[i, 1] = new clsPlayerBullet(x + 10, y + 10);
-                                                playerbullet[i, 2] = new clsPlayerBullet(x - 15, y + 10);
+                                                playerbullet[i, 0] = new mybullet(x - 2, y);
+                                                playerbullet[i, 1] = new mybullet(x + 10, y + 10);
+                                                playerbullet[i, 2] = new mybullet(x - 15, y + 10);
 
                                                 // Dec num of fire round remaining
                                                 player.setX3FireAmmo(player.getX3FireAmmo() - 1);
@@ -936,11 +936,11 @@ namespace BlasterMaster
                                             case 5: //:: x5 fire ::
 
                                                 // Create new instances
-                                                playerbullet[i, 0] = new clsPlayerBullet(x - 2, y);
-                                                playerbullet[i, 1] = new clsPlayerBullet(x + 10, y + 10);
-                                                playerbullet[i, 2] = new clsPlayerBullet(x - 15, y + 10);
-                                                playerbullet[i, 3] = new clsPlayerBullet(x + 20, y + 20);
-                                                playerbullet[i, 4] = new clsPlayerBullet(x - 25, y + 20);
+                                                playerbullet[i, 0] = new mybullet(x - 2, y);
+                                                playerbullet[i, 1] = new mybullet(x + 10, y + 10);
+                                                playerbullet[i, 2] = new mybullet(x - 15, y + 10);
+                                                playerbullet[i, 3] = new mybullet(x + 20, y + 20);
+                                                playerbullet[i, 4] = new mybullet(x - 25, y + 20);
 
                                                 // Dec num of fire round remaining
                                                 player.setX5FireAmmo(player.getX5FireAmmo() - 1);
@@ -1608,7 +1608,7 @@ namespace BlasterMaster
 
         private void doScroll()
         {
-            //------------------------------------------------------------------------------------------------------------------
+          /*  //------------------------------------------------------------------------------------------------------------------
             // Purpose: Vector scrolling (just a series of lines running at different speeds which gives the perception of:
             //
             // a. Distance
@@ -1677,7 +1677,7 @@ namespace BlasterMaster
                         particle[i] = null;
                     }
                 }
-            }
+            }*/
         }
 
         private void fetchNewStars()
